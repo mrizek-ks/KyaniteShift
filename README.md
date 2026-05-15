@@ -22,3 +22,8 @@ Hero refinement:
 - Right side changed to one continuous panel.
 - Fonts made more consistent.
 - Buttons moved upward within the panel.
+
+
+Default anchor update:
+- Added #top to the hero/logo section.
+- Old links ending in #guide redirect to the top hero/logo section on initial page load.

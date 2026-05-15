@@ -76,7 +76,7 @@ section{padding:42px 0}h2{font-size:clamp(1.7rem,3vw,2.5rem);letter-spacing:-.04
 <body>
 <div class="wrap">
 <main>
-<section class="top">
+<section id="top" class="top">
 <div class="left">
 <div class="logo-box"><img src="assets/ks-main-logo.png" alt="KyaniteShift Main logo"></div>
 <div class="statement"><h1><span class="gradient">Structure<br>before<br>solution.</span></h1><div class="rule" aria-hidden="true"></div></div>
@@ -132,5 +132,15 @@ The group may be aligned on wanting stability, but not yet aligned on how stabil
 </main>
 <div class="bottom-footer"><strong>KyaniteShift</strong><br>Independent structured problem-framing framework. Custom GPTs open in ChatGPT and require ChatGPT access.</div>
 </div>
+
+<script>
+  // If an older shared link ends in #guide, open at the top hero/logo section instead.
+  // The Guide nav still works after the page has loaded.
+  if (window.location.hash === "#guide") {
+    history.replaceState(null, "", window.location.pathname + "#top");
+    window.scrollTo(0, 0);
+  }
+</script>
+
 </body>
 </html>
