@@ -19,6 +19,58 @@ section{padding:42px 0}h2{font-size:clamp(1.7rem,3vw,2.5rem);letter-spacing:-.04
 .details{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.prompt-list{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 18px}.prompt{border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.06);border-radius:999px;padding:7px 10px;font-size:.84rem;color:#eaf1ff}.example{display:grid;grid-template-columns:.9fr 1.1fr;gap:16px}pre{white-space:pre-wrap;margin:0;padding:16px;border-radius:16px;background:rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.1);color:#eaf1ff;font-size:.9rem;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}.bottom-footer{border-top:1px solid var(--line);color:var(--muted);padding:34px 0 48px;margin-top:24px;font-size:.92rem}
 @media(max-width:1050px){.top{grid-template-columns:1fr}.right nav{justify-content:flex-start}.statement{padding-left:0}.grid,.grid.three{grid-template-columns:repeat(2,1fr)}.hero-footer{margin-top:36px}.buttons{justify-content:flex-start;margin-top:32px}}
 @media(max-width:760px){nav{display:none}.details,.example{grid-template-columns:1fr}.grid,.grid.three{grid-template-columns:1fr}.statement h1{font-size:clamp(3.3rem,17vw,5.3rem)}.statement{gap:20px}.lead{font-size:1.1rem}.top{padding-top:18px}}
+
+/* Refined continuous right-side hero panel */
+.right nav{
+  margin-bottom:28px;
+}
+.right-panel{
+  background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.035));
+  border-top:4px solid rgba(141,107,255,.22);
+  padding:22px 22px 24px;
+  max-width:720px;
+}
+.right-panel .eyebrow{
+  margin:0 0 18px;
+  background:rgba(72,215,232,.08);
+  font-family:inherit;
+}
+.right-panel .lead,
+.right-panel .not-text,
+.right-panel .credit{
+  font-family:inherit;
+  font-size:1.18rem;
+  line-height:1.55;
+  color:#d7e4ff;
+  margin:0;
+}
+.right-panel .lead{
+  font-size:1.28rem;
+  padding:0;
+  border-top:0;
+  background:none;
+  margin-bottom:22px;
+}
+.right-panel .not-text{
+  color:#c6d1ef;
+  margin-bottom:22px;
+}
+.right-panel .credit{
+  color:#cfd7ff;
+  font-size:1.02rem;
+  margin-bottom:28px;
+}
+.hero-buttons{
+  justify-content:flex-start;
+  margin-top:0;
+}
+.notice,.hero-footer{
+  display:none;
+}
+@media(max-width:1050px){
+  .hero-buttons{justify-content:flex-start;margin-top:0}
+}
+
 </style>
 </head>
 <body>
@@ -31,11 +83,18 @@ section{padding:42px 0}h2{font-size:clamp(1.7rem,3vw,2.5rem);letter-spacing:-.04
 </div>
 <div class="right">
 <nav><a href="#logos">Logos</a><a href="#versions">Versions</a><a href="#guide">Guide</a><a href="#example">Example</a></nav>
-<div class="eyebrow">Structured clarity before solutions</div>
-<p class="lead">KyaniteShift helps clarify unclear situations before reacting, escalating, fixing, or explaining. It separates what is stated, what may be assumed, what is still unknown, and where interpretations may diverge.</p>
-<div class="notice"><strong>What KyaniteShift is not:</strong> KyaniteShift is not therapy, legal advice, medical advice, financial advice, or a replacement for human judgment. It is a structured clarity aid. In emergencies or safety situations, seek immediate human or professional support.</div>
-<div class="hero-footer"><strong>KyaniteShift</strong><br>Independent structured problem-framing framework. Custom GPTs open in ChatGPT and require ChatGPT access.</div>
-<div class="buttons"><a class="btn primary" href="#versions">Start KyaniteShift</a><a class="btn secondary" href="#guide">Choose a version</a></div>
+
+<div class="right-panel">
+  <div class="eyebrow">Structured clarity before solutions</div>
+
+  <p class="lead">KyaniteShift helps clarify unclear situations before reacting, escalating, fixing, or explaining. It separates what is stated, what may be assumed, what is still unknown, and where interpretations may diverge.</p>
+
+  <p class="not-text"><strong>What KyaniteShift is not:</strong> KyaniteShift is not therapy, legal advice, medical advice, financial advice, or a replacement for human judgment. It is a structured clarity aid. In emergencies or safety situations, seek immediate human or professional support.</p>
+
+  <p class="credit"><strong>KyaniteShift</strong><br>Independent structured problem-framing framework. Custom GPTs open in ChatGPT and require ChatGPT access.</p>
+
+  <div class="buttons hero-buttons"><a class="btn primary" href="#versions">Start KyaniteShift</a><a class="btn secondary" href="#guide">Choose a version</a></div>
+</div>
 </div>
 </section>
 
