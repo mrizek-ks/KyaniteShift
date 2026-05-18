@@ -45,3 +45,14 @@ https://chatgpt.com/g/g-6a089ba1f5608191b09ef4cbc6fbce76-kyaniteshift-continuity
 ## Hero left-side refinement
 
 The hero headline was slightly reduced to make room for a short explanation of the advantage of using KyaniteShift directly beneath “Structure before solution.”
+
+
+## Repackaged update — 2026-05-18 15:06 UTC
+- Confirmed KyaniteShift Continuity Studio / KS-CS live GPT link is active:
+  https://chatgpt.com/g/g-6a089ba1f5608191b09ef4cbc6fbce76-kyaniteshift-continuity-studio-ks-cs
+- Updated hero left side: smaller “Structure before solution.” headline with a short advantage statement beneath it.
+- Added light hero explanation for IQuartz and K-Bridge.
+- Removed obsolete KS-CS placeholder note from the Versions section.
+
+
+Verified repackaged update 2026-05-18 15:06 UTC: KS-CS button in the Versions section now opens https://chatgpt.com/g/g-6a089ba1f5608191b09ef4cbc6fbce76-kyaniteshift-continuity-studio-ks-cs. Hero left-side advantage text and right-side IQuartz/K-Bridge notes are included.
