@@ -1,29 +1,42 @@
 # KyaniteShift GitHub Pages Landing Page
 
-Static landing page for GitHub Pages.
+Static public landing page for KyaniteShift.
 
-## Update
+## Included files
 
-Upload these to your repository root:
 - index.html
+- README.md
+- KS-CS-CARRYOVER-NOTE.md
 - assets/ks-main-logo.png
 - assets/ks-ff.png
 - assets/ks-chatside.png
+- assets/ks-sc.png
+- assets/ks-cs.png
+- assets/ks-ff-intro.mp4
 
-This version updates the top hero section to match the provided mockup style:
-- Main logo top-left
-- large "Structure before solution." headline left
-- navigation, description, disclaimer, footer note, and buttons on the right
+## Deployment
 
-No API calls, backend, external images, or external assets.
+Upload these files to the repository root of `mrizek-ks/KyaniteShift` and deploy with GitHub Pages:
+
+Settings → Pages → Deploy from branch → main → /root
+
+## Notes
+
+- CSS is inline inside index.html.
+- No API calls are used.
+- No backend or OpenAI API cost is required.
+- Custom GPT links open inside ChatGPT and require ChatGPT access.
+- Senior Clarity now uses its live Custom GPT link. Continuity Studio currently uses a placeholder button until its final live GPT URL is available.
+- The page includes a local MP4 intro video asset for KS-FF.
+
+## Current design direction
+
+- Main logo upper-left.
+- Large “Structure before solution.” headline.
+- Continuous right-side description/disclaimer/buttons panel.
+- Branch cards for Main, FF, ChatSide, Senior Clarity, and Continuity Studio.
+- KS-FF video section for public/social introduction.
 
 
-Hero refinement:
-- Right side changed to one continuous panel.
-- Fonts made more consistent.
-- Buttons moved upward within the panel.
-
-
-Default anchor update:
-- Added #top to the hero/logo section.
-- Old links ending in #guide redirect to the top hero/logo section on initial page load.
+KyaniteShift Continuity Studio / KS-CS live GPT link:
+https://chatgpt.com/g/g-6a089ba1f5608191b09ef4cbc6fbce76-kyaniteshift-continuity-studio-ks-cs
