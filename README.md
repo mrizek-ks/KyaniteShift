@@ -40,3 +40,8 @@ Settings → Pages → Deploy from branch → main → /root
 
 KyaniteShift Continuity Studio / KS-CS live GPT link:
 https://chatgpt.com/g/g-6a089ba1f5608191b09ef4cbc6fbce76-kyaniteshift-continuity-studio-ks-cs
+
+
+## Hero left-side refinement
+
+The hero headline was slightly reduced to make room for a short explanation of the advantage of using KyaniteShift directly beneath “Structure before solution.”

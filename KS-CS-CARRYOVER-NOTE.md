@@ -25,3 +25,7 @@ The page remains a static public front door for KyaniteShift. It does not use Op
 
 KyaniteShift Continuity Studio / KS-CS live GPT link:
 https://chatgpt.com/g/g-6a089ba1f5608191b09ef4cbc6fbce76-kyaniteshift-continuity-studio-ks-cs
+
+
+Hero refinement:
+The left-side “Structure before solution.” headline was slightly reduced to allow a short explanation of the advantage of using KyaniteShift directly beneath it.
