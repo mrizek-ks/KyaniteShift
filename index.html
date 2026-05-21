@@ -114,6 +114,23 @@ section{padding:42px 0}h2{font-size:clamp(1.7rem,3vw,2.5rem);letter-spacing:-.04
   display: inline-flex;
 }
 
+
+.feedback-email {
+  margin-top: 16px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.055);
+  color: #dbe6ff;
+}
+.feedback-email span {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 1.14rem;
+  color: #ffffff;
+  letter-spacing: .01em;
+}
+
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VBENV022D0"></script>
@@ -197,11 +214,13 @@ Divergence: high
 The group may be aligned on wanting stability, but not yet aligned on how stability should be judged, measured, or owned.</pre></div></div></section>
 </main>
 
+
 <section id="feedback" class="feedback-card">
   <h2>Help improve KyaniteShift</h2>
   <p>If KyaniteShift helped clarify a situation, or if something felt unclear, incomplete, or difficult to use, feedback is welcome. Observations help improve the framework, the GPT branches, and the public guidance around them.</p>
-  <a class="btn secondary" href="mailto:KyaniteShift@gmail.com?subject=KyaniteShift%20Feedback&body=What%20I%20used%3A%0A%0AWhat%20worked%3A%0A%0AWhat%20felt%20unclear%20or%20could%20be%20improved%3A%0A%0A">Send feedback</a>
+  <p class="feedback-email"><strong>Please send comments or feedback to:</strong><br><span>KyaniteShift@gmail.com</span></p>
 </section>
+
 
 
 <div class="bottom-footer"><strong>KyaniteShift</strong><br>Independent structured problem-framing framework. Custom GPTs open in ChatGPT and require ChatGPT access. This static page uses no OpenAI API calls, backend, or paid hosting infrastructure.</div>
@@ -251,21 +270,6 @@ The group may be aligned on wanting stability, but not yet aligned on how stabil
 </script>
 
 
-<script>
-  // KyaniteShift feedback email click tracking.
-  document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll('a[href^="mailto:KyaniteShift@gmail.com"]').forEach(function (link) {
-      link.addEventListener("click", function () {
-        if (typeof gtag === "function") {
-          gtag("event", "feedback_email_click", {
-            event_category: "KyaniteShift Feedback",
-            event_label: "Send feedback"
-          });
-        }
-      });
-    });
-  });
-</script>
 
 </body>
 </html>

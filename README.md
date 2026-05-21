@@ -89,3 +89,17 @@ If GA4 is active, the feedback email click is tracked as:
 `feedback_email_click`
 
 No user message is collected by the website itself; the visitor chooses whether to open and send an email.
+
+
+## Feedback module refinement — 2026-05-21 16:27 UTC
+
+The feedback module was simplified for reliability.
+
+Current approach:
+- No backend.
+- No form service.
+- No mailto button dependency.
+- Visitors are asked to send comments or feedback directly to KyaniteShift@gmail.com.
+
+Reason:
+A true form submission from a static GitHub Pages site would require a backend or third-party form service. Mailto buttons can fail depending on browser/device/default email-app configuration.
