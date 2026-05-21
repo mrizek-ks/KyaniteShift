@@ -115,6 +115,7 @@ section{padding:42px 0}h2{font-size:clamp(1.7rem,3vw,2.5rem);letter-spacing:-.04
 }
 
 
+
 .feedback-email {
   margin-top: 16px;
   padding: 16px 18px;
@@ -123,12 +124,16 @@ section{padding:42px 0}h2{font-size:clamp(1.7rem,3vw,2.5rem);letter-spacing:-.04
   background: rgba(255,255,255,.055);
   color: #dbe6ff;
 }
-.feedback-email span {
+.feedback-email a {
   display: inline-block;
   margin-top: 6px;
   font-size: 1.14rem;
   color: #ffffff;
   letter-spacing: .01em;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 </style>
@@ -215,11 +220,13 @@ The group may be aligned on wanting stability, but not yet aligned on how stabil
 </main>
 
 
+
 <section id="feedback" class="feedback-card">
   <h2>Help improve KyaniteShift</h2>
   <p>If KyaniteShift helped clarify a situation, or if something felt unclear, incomplete, or difficult to use, feedback is welcome. Observations help improve the framework, the GPT branches, and the public guidance around them.</p>
-  <p class="feedback-email"><strong>Please send comments or feedback to:</strong><br><span>KyaniteShift@gmail.com</span></p>
+  <p class="feedback-email"><strong>Please send comments or feedback to:</strong><br><a href="mailto:KyaniteShift@gmail.com">KyaniteShift@gmail.com</a></p>
 </section>
+
 
 
 
@@ -270,6 +277,23 @@ The group may be aligned on wanting stability, but not yet aligned on how stabil
 </script>
 
 
+
+
+<script>
+  // KyaniteShift feedback email click tracking.
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('a[href^="mailto:KyaniteShift@gmail.com"]').forEach(function (link) {
+      link.addEventListener("click", function () {
+        if (typeof gtag === "function") {
+          gtag("event", "feedback_email_click", {
+            event_category: "KyaniteShift Feedback",
+            event_label: "Feedback email"
+          });
+        }
+      });
+    });
+  });
+</script>
 
 </body>
 </html>

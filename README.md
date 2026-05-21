@@ -103,3 +103,12 @@ Current approach:
 
 Reason:
 A true form submission from a static GitHub Pages site would require a backend or third-party form service. Mailto buttons can fail depending on browser/device/default email-app configuration.
+
+
+## Feedback email display fix — 2026-05-21 23:22 UTC
+
+Updated the feedback module so the address displays as a clickable, wrapped email link:
+
+KyaniteShift@gmail.com
+
+The CSS now uses `word-break: break-word` and `overflow-wrap: anywhere` to prevent mobile clipping or truncated display.
