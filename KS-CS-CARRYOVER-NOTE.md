@@ -56,3 +56,20 @@ Included tracking:
 
 Privacy note:
 This tracks landing page visits, GPT-link clicks, and video plays. It does not provide access to user conversations inside ChatGPT.
+
+
+## Feedback module update — 2026-05-21 16:15 UTC
+
+Added a bottom-page feedback module with a mailto link to:
+KyaniteShift@gmail.com
+
+Purpose:
+- invite observations from visitors
+- help improve the KyaniteShift framework and branches
+- avoid backend/form infrastructure
+- preserve static GitHub Pages architecture
+
+If GA4 is active, the feedback email click is tracked as:
+`feedback_email_click`
+
+No user message is collected by the website itself; the visitor chooses whether to open and send an email.

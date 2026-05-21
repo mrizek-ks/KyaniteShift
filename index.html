@@ -91,6 +91,29 @@ section{padding:42px 0}h2{font-size:clamp(1.7rem,3vw,2.5rem);letter-spacing:-.04
   }
 }
 
+
+.feedback-card {
+  margin: 34px auto 0;
+  max-width: 900px;
+  padding: 24px;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.04));
+  box-shadow: 0 24px 70px rgba(0,0,0,.18);
+}
+.feedback-card h2 {
+  margin-bottom: 8px;
+}
+.feedback-card p {
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0 0 18px;
+  max-width: 760px;
+}
+.feedback-card .btn {
+  display: inline-flex;
+}
+
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VBENV022D0"></script>
@@ -112,7 +135,7 @@ section{padding:42px 0}h2{font-size:clamp(1.7rem,3vw,2.5rem);letter-spacing:-.04
 <div class="statement"><h1><span class="gradient">Structure<br>before<br>solution.</span></h1><p class="hero-advantage">KyaniteShift helps slow down unclear situations before reacting, fixing, or explaining. It separates what is known, what may be assumed, and what still needs clarification — so the next step starts from a clearer frame.</p></div>
 </div>
 <div class="right">
-<nav><a href="#logos">Logos</a><a href="#versions">Versions</a><a href="#video">Video</a><a href="#guide">Guide</a><a href="#example">Example</a></nav>
+<nav><a href="#logos">Logos</a><a href="#versions">Versions</a><a href="#video">Video</a><a href="#guide">Guide</a><a href="#example">Example</a><a href="#feedback">Feedback</a></nav>
 
 <div class="right-panel">
   <div class="eyebrow">Structured clarity before solutions</div>
@@ -173,6 +196,14 @@ Divergence: high
 ✦ K Bridge
 The group may be aligned on wanting stability, but not yet aligned on how stability should be judged, measured, or owned.</pre></div></div></section>
 </main>
+
+<section id="feedback" class="feedback-card">
+  <h2>Help improve KyaniteShift</h2>
+  <p>If KyaniteShift helped clarify a situation, or if something felt unclear, incomplete, or difficult to use, feedback is welcome. Observations help improve the framework, the GPT branches, and the public guidance around them.</p>
+  <a class="btn secondary" href="mailto:KyaniteShift@gmail.com?subject=KyaniteShift%20Feedback&body=What%20I%20used%3A%0A%0AWhat%20worked%3A%0A%0AWhat%20felt%20unclear%20or%20could%20be%20improved%3A%0A%0A">Send feedback</a>
+</section>
+
+
 <div class="bottom-footer"><strong>KyaniteShift</strong><br>Independent structured problem-framing framework. Custom GPTs open in ChatGPT and require ChatGPT access. This static page uses no OpenAI API calls, backend, or paid hosting infrastructure.</div>
 </div>
 
@@ -215,6 +246,23 @@ The group may be aligned on wanting stability, but not yet aligned on how stabil
           });
         }
       }, { once: true });
+    });
+  });
+</script>
+
+
+<script>
+  // KyaniteShift feedback email click tracking.
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('a[href^="mailto:KyaniteShift@gmail.com"]').forEach(function (link) {
+      link.addEventListener("click", function () {
+        if (typeof gtag === "function") {
+          gtag("event", "feedback_email_click", {
+            event_category: "KyaniteShift Feedback",
+            event_label: "Send feedback"
+          });
+        }
+      });
     });
   });
 </script>
