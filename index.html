@@ -92,6 +92,16 @@ section{padding:42px 0}h2{font-size:clamp(1.7rem,3vw,2.5rem);letter-spacing:-.04
 }
 
 </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VBENV022D0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VBENV022D0');
+</script>
+
 </head>
 <body>
 <div class="wrap">
@@ -180,5 +190,34 @@ The group may be aligned on wanting stability, but not yet aligned on how stabil
 
 
 <!-- Repackaged KS-CS/hero update verified: 2026-05-18 15:06 UTC -->
+
+<script>
+  // KyaniteShift lightweight GA4 event tracking.
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('a[href*="chatgpt.com/g/"]').forEach(function (link) {
+      link.addEventListener("click", function () {
+        if (typeof gtag === "function") {
+          gtag("event", "gpt_link_click", {
+            event_category: "KyaniteShift GPT",
+            event_label: (link.textContent || "GPT link").trim(),
+            link_url: link.href
+          });
+        }
+      });
+    });
+
+    document.querySelectorAll("video").forEach(function (video) {
+      video.addEventListener("play", function () {
+        if (typeof gtag === "function") {
+          gtag("event", "video_play", {
+            event_category: "KyaniteShift Video",
+            event_label: video.currentSrc || "KS-FF intro video"
+          });
+        }
+      }, { once: true });
+    });
+  });
+</script>
+
 </body>
 </html>

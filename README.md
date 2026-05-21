@@ -56,3 +56,19 @@ The hero headline was slightly reduced to make room for a short explanation of t
 
 
 Verified repackaged update 2026-05-18 15:06 UTC: KS-CS button in the Versions section now opens https://chatgpt.com/g/g-6a089ba1f5608191b09ef4cbc6fbce76-kyaniteshift-continuity-studio-ks-cs. Hero left-side advantage text and right-side IQuartz/K-Bridge notes are included.
+
+
+## GA4 analytics update — 2026-05-21 15:41 UTC
+
+Google Analytics 4 was added to `index.html`.
+
+Measurement ID:
+`G-VBENV022D0`
+
+Included tracking:
+- Page visits.
+- Outbound Custom GPT button clicks as `gpt_link_click`.
+- First video play events as `video_play`.
+
+Privacy note:
+This tracks landing page visits, GPT-link clicks, and video plays. It does not provide access to user conversations inside ChatGPT.
