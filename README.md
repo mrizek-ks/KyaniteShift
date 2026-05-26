@@ -1,126 +1,59 @@
-# KyaniteShift GitHub Pages Landing Page
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KS Papers | KyaniteShift</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(circle at top left, #253b7a, #0b1023 55%, #060912);
+      color: #f5f7ff;
+      line-height: 1.6;
+    }
+    main {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 56px 22px 72px;
+    }
+    a { color: #cdd8ff; }
+    .card {
+      margin-top: 24px;
+      padding: 24px;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 24px;
+      background: rgba(255,255,255,.065);
+      box-shadow: 0 24px 70px rgba(0,0,0,.22);
+    }
+    .meta { color: #b8c2df; font-size: .95rem; }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
+    .btn {
+      display: inline-flex;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.16);
+      color: #fff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p><a href="../">← Back to KyaniteShift</a></p>
+    <h1>KS Papers</h1>
+    <p>Conceptual papers and structured reflections exploring trust, communication, infrastructure, participation, governance, and human-AI systems.</p>
 
-Static public landing page for KyaniteShift.
-
-## Included files
-
-- index.html
-- README.md
-- KS-CS-CARRYOVER-NOTE.md
-- assets/ks-main-logo.png
-- assets/ks-ff.png
-- assets/ks-chatside.png
-- assets/ks-sc.png
-- assets/ks-cs.png
-- assets/ks-ff-intro.mp4
-
-## Deployment
-
-Upload these files to the repository root of `mrizek-ks/KyaniteShift` and deploy with GitHub Pages:
-
-Settings → Pages → Deploy from branch → main → /root
-
-## Notes
-
-- CSS is inline inside index.html.
-- No API calls are used.
-- No backend or OpenAI API cost is required.
-- Custom GPT links open inside ChatGPT and require ChatGPT access.
-- Senior Clarity now uses its live Custom GPT link. Continuity Studio currently uses a placeholder button until its final live GPT URL is available.
-- The page includes a local MP4 intro video asset for KS-FF.
-
-## Current design direction
-
-- Main logo upper-left.
-- Large “Structure before solution.” headline.
-- Continuous right-side description/disclaimer/buttons panel.
-- Branch cards for Main, FF, ChatSide, Senior Clarity, and Continuity Studio.
-- KS-FF video section for public/social introduction.
-
-
-KyaniteShift Continuity Studio / KS-CS live GPT link:
-https://chatgpt.com/g/g-6a089ba1f5608191b09ef4cbc6fbce76-kyaniteshift-continuity-studio-ks-cs
-
-
-## Hero left-side refinement
-
-The hero headline was slightly reduced to make room for a short explanation of the advantage of using KyaniteShift directly beneath “Structure before solution.”
-
-
-## Repackaged update — 2026-05-18 15:06 UTC
-- Confirmed KyaniteShift Continuity Studio / KS-CS live GPT link is active:
-  https://chatgpt.com/g/g-6a089ba1f5608191b09ef4cbc6fbce76-kyaniteshift-continuity-studio-ks-cs
-- Updated hero left side: smaller “Structure before solution.” headline with a short advantage statement beneath it.
-- Added light hero explanation for IQuartz and K-Bridge.
-- Removed obsolete KS-CS placeholder note from the Versions section.
-
-
-Verified repackaged update 2026-05-18 15:06 UTC: KS-CS button in the Versions section now opens https://chatgpt.com/g/g-6a089ba1f5608191b09ef4cbc6fbce76-kyaniteshift-continuity-studio-ks-cs. Hero left-side advantage text and right-side IQuartz/K-Bridge notes are included.
-
-
-## GA4 analytics update — 2026-05-21 15:41 UTC
-
-Google Analytics 4 was added to `index.html`.
-
-Measurement ID:
-`G-VBENV022D0`
-
-Included tracking:
-- Page visits.
-- Outbound Custom GPT button clicks as `gpt_link_click`.
-- First video play events as `video_play`.
-
-Privacy note:
-This tracks landing page visits, GPT-link clicks, and video plays. It does not provide access to user conversations inside ChatGPT.
-
-
-## Feedback module update — 2026-05-21 16:15 UTC
-
-Added a bottom-page feedback module with a mailto link to:
-KyaniteShift@gmail.com
-
-Purpose:
-- invite observations from visitors
-- help improve the KyaniteShift framework and branches
-- avoid backend/form infrastructure
-- preserve static GitHub Pages architecture
-
-If GA4 is active, the feedback email click is tracked as:
-`feedback_email_click`
-
-No user message is collected by the website itself; the visitor chooses whether to open and send an email.
-
-
-## Feedback module refinement — 2026-05-21 16:27 UTC
-
-The feedback module was simplified for reliability.
-
-Current approach:
-- No backend.
-- No form service.
-- No mailto button dependency.
-- Visitors are asked to send comments or feedback directly to KyaniteShift@gmail.com.
-
-Reason:
-A true form submission from a static GitHub Pages site would require a backend or third-party form service. Mailto buttons can fail depending on browser/device/default email-app configuration.
-
-
-## Feedback email display fix — 2026-05-21 23:22 UTC
-
-Updated the feedback module so the address displays as a clickable, wrapped email link:
-
-KyaniteShift@gmail.com
-
-The CSS now uses `word-break: break-word` and `overflow-wrap: anywhere` to prevent mobile clipping or truncated display.
-
-
-## KS Papers repository prep — 2026-05-26 03:16 UTC
-
-Added:
-- `#papers` section to the landing page
-- Top navigation link for Papers
-- `/papers/` repository landing page
-- `/papers/README.md`
-- Placeholder for first paper artifact: `Trust Architecture and the Future of AI Infrastructure`
-
-No paper PDF/DOCX artifact is included yet. This update prepares the site structure first.
+    <section class="card">
+      <h2>Trust Architecture and the Future of AI Infrastructure</h2>
+      <p class="meta">First KS paper artifact · Coming soon</p>
+      <p><em>An observation of the whole: trust, access, governance, privacy, participation, and the future evolution of human-AI systems.</em></p>
+      <p>This paper will be added here as the first artifact in the KS Papers repository.</p>
+      <div class="actions">
+        <a class="btn" href="../#feedback">Send feedback</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
