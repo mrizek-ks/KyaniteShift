@@ -136,6 +136,65 @@ section{padding:42px 0}h2{font-size:clamp(1.7rem,3vw,2.5rem);letter-spacing:-.04
   text-underline-offset: 3px;
 }
 
+
+.papers-card {
+  margin: 34px auto 0;
+  max-width: 1040px;
+  padding: 28px;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 26px;
+  background: linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.04));
+  box-shadow: 0 24px 70px rgba(0,0,0,.18);
+}
+.papers-card h2 {
+  margin-bottom: 10px;
+}
+.papers-card p {
+  color: var(--muted);
+  line-height: 1.65;
+  max-width: 860px;
+}
+.paper-list {
+  display: grid;
+  gap: 16px;
+  margin-top: 20px;
+}
+.paper-item {
+  padding: 20px;
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.055);
+}
+.paper-item h3 {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+}
+.paper-meta {
+  font-size: .92rem;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.paper-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+.paper-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.16);
+  color: #fff;
+  text-decoration: none;
+  background: rgba(255,255,255,.07);
+}
+.paper-actions a:hover {
+  background: rgba(255,255,255,.12);
+}
+
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VBENV022D0"></script>
@@ -157,7 +216,7 @@ section{padding:42px 0}h2{font-size:clamp(1.7rem,3vw,2.5rem);letter-spacing:-.04
 <div class="statement"><h1><span class="gradient">Structure<br>before<br>solution.</span></h1><p class="hero-advantage">KyaniteShift helps slow down unclear situations before reacting, fixing, or explaining. It separates what is known, what may be assumed, and what still needs clarification — so the next step starts from a clearer frame.</p></div>
 </div>
 <div class="right">
-<nav><a href="#logos">Logos</a><a href="#versions">Versions</a><a href="#video">Video</a><a href="#guide">Guide</a><a href="#example">Example</a><a href="#feedback">Feedback</a></nav>
+<nav><a href="#logos">Logos</a><a href="#versions">Versions</a><a href="#papers">Papers</a><a href="#video">Video</a><a href="#guide">Guide</a><a href="#example">Example</a><a href="#feedback">Feedback</a></nav>
 
 <div class="right-panel">
   <div class="eyebrow">Structured clarity before solutions</div>
@@ -219,6 +278,26 @@ Divergence: high
 The group may be aligned on wanting stability, but not yet aligned on how stability should be judged, measured, or owned.</pre></div></div></section>
 </main>
 
+
+
+
+<section id="papers" class="papers-card">
+  <h2>KS Papers</h2>
+  <p>Conceptual papers and structured reflections exploring trust, communication, infrastructure, participation, governance, and human-AI systems. This section is prepared as a public repository for longer-form KyaniteShift work.</p>
+
+  <div class="paper-list">
+    <article class="paper-item">
+      <h3>Trust Architecture and the Future of AI Infrastructure</h3>
+      <div class="paper-meta">First KS paper artifact · Coming soon</div>
+      <p><em>An observation of the whole: trust, access, governance, privacy, participation, and the future evolution of human-AI systems.</em></p>
+      <p>This paper will be added as the first artifact in the KS Papers repository.</p>
+      <div class="paper-actions">
+        <a href="papers/" aria-label="Open KS Papers repository">Open KS Papers</a>
+        <a href="#feedback" aria-label="Send feedback about KS Papers">Send feedback</a>
+      </div>
+    </article>
+  </div>
+</section>
 
 
 <section id="feedback" class="feedback-card">

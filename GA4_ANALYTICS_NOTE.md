@@ -54,3 +54,15 @@ Updated the feedback module so the address displays as a clickable, wrapped emai
 KyaniteShift@gmail.com
 
 The CSS now uses `word-break: break-word` and `overflow-wrap: anywhere` to prevent mobile clipping or truncated display.
+
+
+## KS Papers repository prep — 2026-05-26 03:16 UTC
+
+Added:
+- `#papers` section to the landing page
+- Top navigation link for Papers
+- `/papers/` repository landing page
+- `/papers/README.md`
+- Placeholder for first paper artifact: `Trust Architecture and the Future of AI Infrastructure`
+
+No paper PDF/DOCX artifact is included yet. This update prepares the site structure first.
