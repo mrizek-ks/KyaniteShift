@@ -13,7 +13,7 @@ a{color:inherit;text-decoration:none}.wrap{width:min(1180px,calc(100% - 36px));m
 .top{min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start;padding:18px 0 36px}
 .left{display:flex;flex-direction:column;gap:18px}.logo-box{width:min(560px,100%);background:rgba(255,255,255,.075);border:1px solid rgba(255,255,255,.18);border-radius:22px;padding:12px;box-shadow:0 8px 32px rgba(0,0,0,.3)}
 .logo-box img{width:100%;display:block;border-radius:19px}.statement{display:flex;gap:34px;align-items:stretch;padding-left:78px}.statement h1{margin:0;font-size:clamp(2.9rem,5vw,4.6rem);line-height:1.08;letter-spacing:-.04em;color:#f4f7ff}
-.right{padding-top:0}nav{display:flex;justify-content:flex-end;gap:22px;color:#d9d6ff;font-size:1rem;margin-bottom:16px;flex-wrap:wrap}nav a:hover{color:white}.eyebrow{display:inline-block;color:#48d7e8;font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:.75rem}
+.right{padding-top:0}nav{display:flex;justify-content:flex-end;gap:22px;color:#d9d6ff;font-size:1rem;margin-bottom:16px;flex-wrap:wrap}nav a{color:#48d7e8;transition:color 0.2s ease}nav a:hover{color:#ffffff}.eyebrow{display:inline-block;color:#48d7e8;font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:.75rem}
 .notice{background:rgba(255,255,255,.075);border:1px solid var(--line);border-radius:24px;padding:22px;color:var(--muted);font-size:1.03rem;margin-top:18px}.hero-footer{color:#cfd7ff;margin-top:28px;font-size:.92rem;line-height:1.5}
 section{padding:42px 0}h2{font-size:clamp(1.7rem,3vw,2.5rem);letter-spacing:-.04em;margin:0 0 10px}.sub{color:var(--muted);margin:0 0 22px;max-width:760px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.grid.three{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .card{background:rgba(255,255,255,.065);border:1px solid var(--line);border-radius:24px;padding:28px;display:flex;flex-direction:column}
@@ -25,7 +25,7 @@ section{padding:42px 0}h2{font-size:clamp(1.7rem,3vw,2.5rem);letter-spacing:-.04
 .example{display:grid;grid-template-columns:1fr 1fr;gap:24px}.example .card{background:rgba(255,255,255,.045)}.example pre{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:20px;color:#dbe6ff;font-size:.9rem;line-height:1.6;margin:0;overflow-x:auto}
 .details{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.bottom-footer{text-align:center;margin-top:42px;padding-top:42px;border-top:1px solid rgba(255,255,255,.1);color:var(--muted);font-size:.9rem}
 @media(max-width:1050px){.top{grid-template-columns:1fr}.right nav{justify-content:flex-start}.statement{padding-left:0}.grid,.grid.three{grid-template-columns:repeat(2,1fr)}.hero-footer{margin-top:22px}}
-@media(max-width:760px){nav{display:flex;justify-content:flex-start;gap:16px;flex-wrap:wrap;font-size:0.95rem}.details,.example{grid-template-columns:1fr}.grid,.grid.three{grid-template-columns:1fr}.statement h1{font-size:clamp(3.3rem,17vw,5.3rem)}.statement{gap:20px;padding-left:0;flex-direction:column}.example{gap:18px}.buttons{flex-direction:column}.btn{width:100%}}
+@media(max-width:760px){nav{display:flex;justify-content:flex-start;gap:12px;flex-wrap:nowrap;font-size:0.92rem}.details,.example{grid-template-columns:1fr}.grid,.grid.three{grid-template-columns:1fr}.statement h1{font-size:clamp(3.3rem,17vw,5.3rem)}.statement{gap:20px;padding-left:0;flex-direction:column}.example{gap:18px}.buttons{flex-direction:column}.btn{width:100%}}
 
 /* Refined continuous right-side hero panel */
 .right nav{
@@ -218,7 +218,7 @@ section{padding:42px 0}h2{font-size:clamp(1.7rem,3vw,2.5rem);letter-spacing:-.04
 <div class="statement"><h1><span class="gradient">Structure<br>before<br>solution.</span></h1><p class="hero-advantage">KyaniteShift helps slow down unclear situations before reacting, fixing, or explaining.</p></div>
 </div>
 <div class="right">
-<nav><a href="#versions">Versions</a><a href="papers/">Papers</a><a href="#video">Video</a><a href="#guide">Guide</a><a href="#example">Example</a><a href="#feedback">Feedback</a></nav>
+<nav><a href="#versions">Versions</a><a href="papers/">Papers</a><a href="#guide">Guide</a><a href="#example">Example</a><a href="#feedback">Feedback</a></nav>
 
 <div class="right-panel">
   <div class="eyebrow">Structured clarity before solutions</div>
@@ -246,8 +246,6 @@ section{padding:42px 0}h2{font-size:clamp(1.7rem,3vw,2.5rem);letter-spacing:-.04
 <article class="card"><img class="gpt-img" src="assets/ks-sc.png" alt="KyaniteShift Senior Clarity logo"><span class="tag">Senior Clarity</span><h3>KyaniteShift SC</h3><p>A guiding-light version for senior decisions, family concerns, and service issues.</p></article>
 <article class="card"><img class="gpt-img" src="assets/ks-cs.png" alt="KyaniteShift Continuity Studio logo"><span class="tag">Continuity Studio</span><h3>KyaniteShift Continuity Studio</h3><p>A polished studio for turning clarity into public-facing communication and publishing.</p></article>
 </div></section>
-
-<section id="video"><h2>KS-FF introduction video</h2><p class="sub">A short TikTok-style introduction for KyaniteShift FF. It uses the current KS-FF visual direction: quiet starfield, readable text, and a calm tone.</p>
 
 <section id="guide"><h2>Which version should I use?</h2><p class="sub">Each version uses the same core idea — clarity before reaction — but is shaped for a different situation and tone.</p><div class="grid">
 <article class="card"><h3>KyaniteShift Main</h3><p><strong>Use for:</strong> workplace issues, leadership communication, RCA framing, creative uncertainty, recurring problems, and team alignment.</p></article>
