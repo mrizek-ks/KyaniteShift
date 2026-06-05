@@ -7,25 +7,26 @@
 <meta name="description" content="KyaniteShift helps clarify unclear situations before reacting, escalating, fixing, or explaining.">
 <style>
 :root{--bg:#071026;--bg2:#10264a;--card:rgba(255,255,255,.075);--line:rgba(255,255,255,.16);--text:#f4f7ff;--muted:#c0c9ed;--blue:#3c7dff;--cyan:#48d7e8;--violet:#8d6bff}
-*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);background:radial-gradient(circle at 16% 8%,rgba(72,215,232,.14) 0%,rgba(72,215,232,0) 34%),radial-gradient(circle at 84% 93%,rgba(61,125,255,.12) 0%,rgba(61,125,255,0) 34%),linear-gradient(135deg,var(--bg2),var(--bg) 58%,#050b1a);line-height:1.6;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(0deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;z-index:1}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);background:radial-gradient(circle at 16% 8%,rgba(72,215,232,.14),transparent 34rem),radial-gradient(circle at 100% 100%,rgba(60,125,255,.12),transparent 28rem),linear-gradient(135deg,var(--bg),var(--bg2) 58%,#06081f)}
+body:before{content:"";position:fixed;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(0deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:50px 50px;pointer-events:none}
 a{color:inherit;text-decoration:none}.wrap{width:min(1180px,calc(100% - 36px));margin:auto;position:relative}
 .top{min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start;padding:18px 0 36px}
-.left{display:flex;flex-direction:column;gap:18px}.logo-box{width:min(560px,100%);background:rgba(255,255,255,.075);border:1px solid rgba(255,255,255,.18);border-radius:22px;padding:12px;box-shadow:0 8px 32px rgba(0,0,0,.3)}
-.logo-box img{width:100%;display:block;border-radius:19px}.statement{display:flex;gap:34px;align-items:stretch;padding-left:78px}.statement h1{margin:0;font-size:clamp(2.9rem,5vw,4.6rem);line-height:1.08;letter-spacing:-.04em;color:#f4f7ff}
-.right{padding-top:0}nav{display:flex;justify-content:flex-end;gap:22px;color:#d9d6ff;font-size:1rem;margin-bottom:16px;flex-wrap:wrap}nav a{color:#48d7e8;transition:color 0.2s ease}nav a:hover{color:#ffffff}.eyebrow{display:inline-block;color:#48d7e8;font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:.75rem}
-.notice{background:rgba(255,255,255,.075);border:1px solid var(--line);border-radius:24px;padding:22px;color:var(--muted);font-size:1.03rem;margin-top:18px}.hero-footer{color:#cfd7ff;margin-top:28px;font-size:.92rem;line-height:1.5}
-section{padding:42px 0}h2{font-size:clamp(1.7rem,3vw,2.5rem);letter-spacing:-.04em;margin:0 0 10px}.sub{color:var(--muted);margin:0 0 22px;max-width:760px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.grid.three{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.card{background:rgba(255,255,255,.065);border:1px solid var(--line);border-radius:24px;padding:28px;display:flex;flex-direction:column}
-.card h3{margin:12px 0 0;font-size:1.28rem}.card p{margin:12px 0 0;color:var(--muted);flex-grow:1}.card img{width:100%;border-radius:16px;margin-bottom:8px}.card .tag{display:inline-block;margin-bottom:12px;background:rgba(72,215,232,.15);border:1px solid rgba(72,215,232,.3);color:#b3e9f7;padding:6px 11px;border-radius:999px;font-size:.8rem;font-weight:600;width:fit-content}
-.gpt-img{width:100%}.wide{width:100%}.buttons{display:flex;gap:16px;margin-top:22px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 24px;border-radius:999px;border:1px solid rgba(255,255,255,.18);text-decoration:none;color:#fff;background:rgba(255,255,255,.08);font-weight:600;min-height:44px}
+.left{display:flex;flex-direction:column;gap:18px}.logo-box{width:min(560px,100%);background:rgba(255,255,255,.075);border:1px solid rgba(255,255,255,.18);border-radius:22px;padding:12px;box-shadow:0 16px 54px rgba(0,0,0,.2)}
+.logo-box img{width:100%;display:block;border-radius:19px}.statement{display:flex;gap:34px;align-items:stretch;padding-left:78px}.statement h1{margin:0;font-size:clamp(2.9rem,5vw,4.6rem);line-height:1.1;letter-spacing:-.04em;font-weight:700}.gradient{background:linear-gradient(135deg,var(--cyan) 0%,var(--violet));background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent}.hero-advantage{margin:0;font-size:clamp(1.02rem,1.15vw,1.12rem);line-height:1.62;color:rgba(235,242,255,.86);text-shadow:0 1px 14px rgba(0,0,0,.28);max-width:480px}
+.right{padding-top:0}nav{display:flex;justify-content:flex-end;gap:22px;color:#d9d6ff;font-size:1rem;margin-bottom:16px;flex-wrap:wrap}nav a{color:#48d7e8;transition:color 0.2s ease}nav a:hover{color:#fff}
+.notice{background:rgba(255,255,255,.075);border:1px solid var(--line);border-radius:24px;padding:22px;color:var(--muted);font-size:1.03rem;margin-top:18px}.hero-footer{color:#cfd7ff;margin-top:28px;font-size:1.01rem;line-height:1.55;max-width:720px}
+section{padding:42px 0}h2{font-size:clamp(1.7rem,3vw,2.5rem);letter-spacing:-.04em;margin:0 0 10px}.sub{color:var(--muted);margin:0 0 22px;max-width:760px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.card{background:rgba(255,255,255,.065);border:1px solid var(--line);border-radius:24px;padding:28px;display:flex;flex-direction:column;transition:all 0.3s ease}
+.card:hover{background:rgba(255,255,255,.095);border-color:rgba(255,255,255,.24);transform:translateY(-2px)}
+.card h3{margin:12px 0 0;font-size:1.28rem}.card p{margin:12px 0 0;color:var(--muted);flex-grow:1}.card img{width:100%;border-radius:16px;margin-bottom:8px}.card .tag{display:inline-block;margin-bottom:12px;background:rgba(72,215,232,.14);border:1px solid rgba(72,215,232,.3);color:#dce8ff;padding:6px 10px;border-radius:6px;font-size:.85rem}
+.gpt-img{width:100%}.wide{width:100%}.buttons{display:flex;gap:16px;margin-top:22px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 24px;border-radius:14px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;text-decoration:none;font-weight:600;transition:all 0.2s ease;cursor:pointer}
 .btn.primary{background:linear-gradient(135deg,#3c7dff,#48d7e8);border-color:rgba(255,255,255,.2);color:#fff}
 .btn:hover{background:rgba(255,255,255,.12)}.btn.primary:hover{opacity:.9}
-.prompt-list{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 18px}.prompt{border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.06);color:#dbe6ff;padding:8px 12px;border-radius:6px;font-size:.85rem}
-.example{display:grid;grid-template-columns:1fr 1fr;gap:24px}.example .card{background:rgba(255,255,255,.045)}.example pre{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:20px;color:#dbe6ff;font-size:.9rem;line-height:1.6;margin:0;overflow-x:auto}
-.details{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.bottom-footer{text-align:center;margin-top:42px;padding-top:42px;border-top:1px solid rgba(255,255,255,.1);color:var(--muted);font-size:.9rem}
-@media(max-width:1050px){.top{grid-template-columns:1fr}.right nav{justify-content:flex-start}.statement{padding-left:0}.grid,.grid.three{grid-template-columns:repeat(2,1fr)}.hero-footer{margin-top:22px}}
-@media(max-width:760px){nav{display:flex;justify-content:flex-start;gap:12px;flex-wrap:nowrap;font-size:0.92rem}.details,.example{grid-template-columns:1fr}.grid,.grid.three{grid-template-columns:1fr}.statement h1{font-size:clamp(3.3rem,17vw,5.3rem)}.statement{gap:20px;padding-left:0;flex-direction:column}.example{gap:18px}.buttons{flex-direction:column}.btn{width:100%}}
+.prompt-list{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 18px}.prompt{border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.06);color:#dbe6ff;padding:8px 12px;border-radius:6px;font-size:.92rem}
+.example{display:grid;grid-template-columns:1fr 1fr;gap:24px}.example .card{background:rgba(255,255,255,.045)}.example pre{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:20px;overflow-x:auto;color:#e8edff;font-size:.95rem;line-height:1.5}
+.details{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.bottom-footer{text-align:center;margin-top:42px;padding-top:42px;border-top:1px solid rgba(255,255,255,.1);color:var(--muted);font-size:1rem}
+@media(max-width:1050px){.top{grid-template-columns:1fr}.right nav{justify-content:flex-start}.statement{padding-left:0}.grid,.grid.three{grid-template-columns:repeat(2,1fr)}.hero-footer{margin-top:18px}.details{grid-template-columns:1fr}}
+@media(max-width:760px){nav{display:flex;justify-content:flex-start;gap:12px;flex-wrap:nowrap;font-size:0.92rem}.details,.example{grid-template-columns:1fr}.grid,.grid.three{grid-template-columns:1fr}.statement{flex-direction:column;gap:18px;padding-left:0}.hero-footer{margin-top:14px;font-size:1rem}.buttons{flex-direction:column}.btn{width:100%}}
 
 /* Refined continuous right-side hero panel */
 .right nav{
@@ -215,7 +216,7 @@ section{padding:42px 0}h2{font-size:clamp(1.7rem,3vw,2.5rem);letter-spacing:-.04
 <section id="top" class="top">
 <div class="left">
 <div class="logo-box"><img src="assets/ks-main-logo.png" alt="KyaniteShift Main logo"></div>
-<div class="statement"><h1><span class="gradient">Structure<br>before<br>solution.</span></h1><p class="hero-advantage">KyaniteShift helps slow down unclear situations before reacting, fixing, or explaining.</p></div>
+<div class="statement"><h1><span class="gradient">Structure<br>before<br>solution.</span></h1><p class="hero-advantage">KyaniteShift helps slow down unclear situations before reacting, fixing, or explaining. Get clarity first.</p></div>
 </div>
 <div class="right">
 <nav><a href="#versions">Versions</a><a href="papers/">Papers</a><a href="#guide">Guide</a><a href="#example">Example</a><a href="#feedback">Feedback</a></nav>
@@ -223,14 +224,14 @@ section{padding:42px 0}h2{font-size:clamp(1.7rem,3vw,2.5rem);letter-spacing:-.04
 <div class="right-panel">
   <div class="eyebrow">Structured clarity before solutions</div>
 
-  <p class="lead">KyaniteShift is a structured clarity framework for slowing down unclear situations before reaction. It separates what is stated, what may be assumed, what is still unknown, and what remains uncertain.</p>
+  <p class="lead">KyaniteShift is a structured clarity framework for slowing down unclear situations before reaction. It separates what is stated, what may be assumed, what is still unknown, and what remains structurally misaligned.</p>
 
   <div class="framework-notes">
     <div class="framework-note"><strong>IQuartz</strong> helps identify whether a situation is recurring, interpretive, or structurally misaligned.</div>
     <div class="framework-note"><strong>K-Bridge</strong> turns the clearer frame into usable continuity without forcing a premature conclusion.</div>
   </div>
 
-  <p class="not-text"><strong>What KyaniteShift is not:</strong> KyaniteShift is not therapy, legal advice, medical advice, financial advice, or a replacement for human judgment. It is a structured problem-framing tool that helps clarify thinking.</p>
+  <p class="not-text"><strong>What KyaniteShift is not:</strong> KyaniteShift is not therapy, legal advice, medical advice, financial advice, or a replacement for human judgment. It is a structured clarity framework for thinking through messy situations.</p>
 
   <p class="credit"><strong>KyaniteShift</strong><br>Independent structured problem-framing framework. Custom GPTs open in ChatGPT and require ChatGPT access.</p>
 
@@ -240,23 +241,23 @@ section{padding:42px 0}h2{font-size:clamp(1.7rem,3vw,2.5rem);letter-spacing:-.04
 </section>
 
 <section id="versions"><h2>Try a KyaniteShift GPT</h2><p class="sub">These links open inside ChatGPT. Users need to be signed in and use their own ChatGPT access.</p><div class="grid">
-<article class="card"><img class="gpt-img wide" src="assets/ks-main-logo.png" alt="KyaniteShift Main logo"><span class="tag">Main</span><h3>KyaniteShift Main</h3><p>Core structured problem framing for workplace issues, RCA, and decision clarity.</p></article>
-<article class="card"><img class="gpt-img" src="assets/ks-ff.png" alt="KyaniteShift FF family-friendly logo"><span class="tag">Family Friendly</span><h3>KyaniteShift FF</h3><p>A softer version for everyday confusion, relationships, and general clarity.</p></article>
-<article class="card"><img class="gpt-img" src="assets/ks-chatside.png" alt="KyaniteShift ChatSide logo"><span class="tag">ChatSide</span><h3>KyaniteShift ChatSide</h3><p>A conversational branch for ongoing chat-style thinking and reflection.</p></article>
-<article class="card"><img class="gpt-img" src="assets/ks-sc.png" alt="KyaniteShift Senior Clarity logo"><span class="tag">Senior Clarity</span><h3>KyaniteShift SC</h3><p>A guiding-light version for senior decisions, family concerns, and service issues.</p></article>
-<article class="card"><img class="gpt-img" src="assets/ks-cs.png" alt="KyaniteShift Continuity Studio logo"><span class="tag">Continuity Studio</span><h3>KyaniteShift Continuity Studio</h3><p>A polished studio for turning clarity into public-facing communication and publishing.</p></article>
+<a href="https://chatgpt.com/g/g-69f6a65b405c8191ad2a6397b3ba4466-kyaniteshift-structure-before-solution" class="card"><img class="gpt-img wide" src="assets/ks-main-logo.png" alt="KyaniteShift Main logo"><span class="tag">Main</span><h3>KyaniteShift Main</h3><p>Core structured problem framing for workplace, leadership, RCA, creative uncertainty, and team alignment.</p></a>
+<a href="https://chatgpt.com/g/g-69ffe0bcb884819195535add1b247b49-kyaniteshift-ff-family-friendly" class="card"><img class="gpt-img" src="assets/ks-ff.png" alt="KyaniteShift FF family-friendly logo"><span class="tag">Family Friendly</span><h3>KyaniteShift FF</h3><p>A softer version for family-friendly reflection, younger users, everyday confusion, and friendship tension.</p></a>
+<a href="https://chatgpt.com/g/g-6a026e38d2f48191861f3707c694e01f-kyaniteshift-chatside" class="card"><img class="gpt-img" src="assets/ks-chatside.png" alt="KyaniteShift ChatSide logo"><span class="tag">ChatSide</span><h3>KyaniteShift ChatSide</h3><p>A conversational branch for ongoing chat where full decomposition every turn would feel too heavy.</p></a>
+<a href="https://chatgpt.com/g/g-6a08a3ad3f6c81918fae599bb72b21fc-kyaniteshift-sc-senior-clarity" class="card"><img class="gpt-img" src="assets/ks-sc.png" alt="KyaniteShift Senior Clarity logo"><span class="tag">Senior Clarity</span><h3>KyaniteShift SC</h3><p>A guiding-light version for senior clarity, appointments, family concerns, and everyday decisions.</p></a>
+<a href="https://chatgpt.com/g/g-6a089ba1f5608191b09ef4cbc6fbce76-kyaniteshift-continuity-studio-ks-cs" class="card"><img class="gpt-img" src="assets/ks-cs.png" alt="KyaniteShift Continuity Studio logo"><span class="tag">Continuity Studio</span><h3>KyaniteShift Continuity Studio</h3><p>A polished communication version for turning clarified frames and K-Bridges into finished work.</p></a>
 </div></section>
 
-<section id="guide"><h2>Which version should I use?</h2><p class="sub">Each version uses the same core idea — clarity before reaction — but is shaped for a different situation and tone.</p><div class="grid">
+<section id="guide"><h2>Which version should I use?</h2><p class="sub">Each version uses the same core idea — clarity before reaction — but is shaped for a different situation and tone.</p><div class="grid details">
 <article class="card"><h3>KyaniteShift Main</h3><p><strong>Use for:</strong> workplace issues, leadership communication, RCA framing, creative uncertainty, recurring problems, and team alignment.</p></article>
 <article class="card"><h3>KyaniteShift FF</h3><p><strong>Use for:</strong> family-friendly reflection, younger/general users, everyday confusion, friendship tension, and softer emotional clarity.</p></article>
 <article class="card"><h3>KyaniteShift ChatSide</h3><p><strong>Use for:</strong> ongoing chat-style conversations where full decomposition every turn would feel too heavy.</p></article>
 <article class="card"><h3>KyaniteShift SC</h3><p><strong>Use for:</strong> senior clarity, appointments, family concerns, pressure-filled requests, service issues, and everyday decisions.</p></article>
 
-<article class="card"><h3>KyaniteShift Continuity Studio</h3><p><strong>Use for:</strong> turning clarified frames, K-Bridges, reflections, and structured ideas into polished communication, public writing, or publication.</p></article>
+<article class="card"><h3>KyaniteShift Continuity Studio</h3><p><strong>Use for:</strong> turning clarified frames, K-Bridges, reflections, and structured ideas into polished communication, publications, or organizational work.</p></article>
 </div></section>
 
-<section id="example"><h2>Example use</h2><p class="sub">KyaniteShift is useful when a situation feels messy, repeated, sensitive, or hard to explain.</p><div class="example"><div class="card"><h3>Situation</h3><p>A team repeatedly debates whether the system is "stable enough." The same concerns surface each quarter, and frustration is rising.</p></div><div class="card"><pre>🔷 Frame
+<section id="example"><h2>Example use</h2><p class="sub">KyaniteShift is useful when a situation feels messy, repeated, sensitive, or hard to explain.</p><div class="example"><div class="card"><h3>Two people, one recurring argument</h3><p><strong>💬 What's happening:</strong><br>"We keep having the same fight about system stability but we keep talking past each other."</p></div><div class="card"><pre>🔹 State (What they said)
 Claims: The system is stable.
 Claims: The system is not stable.
 Assumptions: "Stability" means the same thing to both sides.
@@ -278,12 +279,11 @@ The group may be aligned on wanting stability, but not yet aligned on how stabil
 
 <section id="feedback" class="feedback-card">
   <h2>Help improve KyaniteShift</h2>
-  <p>If KyaniteShift helped clarify a situation, or if something felt unclear, incomplete, or difficult to use, feedback is welcome. Observations help improve the framework, the GPT branches, and the website.</p>
+  <p>If KyaniteShift helped clarify a situation, or if something felt unclear, incomplete, or difficult to use, feedback is welcome. Observations help improve the framework, the GPT branches, and the overall experience.</p>
   <p class="feedback-email"><strong>Please send comments or feedback to:</strong><br><a href="mailto:KyaniteShift@gmail.com">KyaniteShift@gmail.com</a></p>
 </section>
 
-<div class="bottom-footer"><strong>KyaniteShift</strong><br>Independent structured problem-framing framework. Custom GPTs open in ChatGPT and require ChatGPT access. This static page uses no Open Telemetry, pixels, or user tracking.
-</div>
+<div class="bottom-footer"><strong>KyaniteShift</strong><br>Independent structured problem-framing framework. Custom GPTs open in ChatGPT and require ChatGPT access. This static page uses no Open AI APIs or third-party tracking beyond Google Analytics (GA4).</div>
 
 <script>
   // If an older shared link ends in #guide, open at the top hero/logo section instead.
