@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About the Author | KyaniteShift</title>
+  <meta name="description" content="Mike Rizek is an author and framework developer working at the intersection of constitutional theory, geopolitical security, and AI governance.">
+  <style>
+    :root {
+      --bg-1: #070b16;
+      --bg-2: #101b3f;
+      --card: rgba(255,255,255,0.075);
+      --card-2: rgba(255,255,255,0.045);
+      --line: rgba(255,255,255,0.16);
+      --text: #f6f8ff;
+      --muted: #b9c3df;
+      --blue: #66a3ff;
+      --blue-2: #2e74ff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(78,112,255,0.26), transparent 34rem),
+        radial-gradient(circle at bottom right, rgba(39,126,255,0.16), transparent 30rem),
+        linear-gradient(135deg, var(--bg-2), var(--bg-1) 58%, #05070f);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    main {
+      width: min(980px, calc(100% - 36px));
+      margin: 0 auto;
+      padding: 54px 0 72px;
+    }
+    a { color: #d9e4ff; }
+    .topnav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+    .topnav a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .topnav a:hover { color: #fff; }
+    .hero, .panel {
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, var(--card), var(--card-2));
+      box-shadow: 0 28px 90px rgba(0,0,0,0.28);
+    }
+    .hero {
+      padding: 34px;
+      border-radius: 28px;
+    }
+    .eyebrow {
+      color: var(--blue);
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-size: .8rem;
+      margin-bottom: 10px;
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 5vw, 3.35rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+    }
+    .intro {
+      max-width: 820px;
+      color: var(--muted);
+      font-size: 1.08rem;
+      margin: 0;
+    }
+    .panel {
+      margin-top: 26px;
+      padding: 28px;
+      border-radius: 26px;
+      background: rgba(255,255,255,0.065);
+    }
+    .panel h2 {
+      margin: 0 0 14px;
+      font-size: clamp(1.35rem, 3vw, 1.8rem);
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+    }
+    .panel p {
+      max-width: 820px;
+      margin: 0 0 16px;
+      color: #e8edff;
+    }
+    .panel p:last-child { margin-bottom: 0; }
+    .muted { color: var(--muted); }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 11px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.18);
+      text-decoration: none;
+      color: #fff;
+      background: rgba(255,255,255,0.09);
+      font-weight: 650;
+    }
+    .btn.primary {
+      background: linear-gradient(135deg, var(--blue-2), #67a6ff);
+      border-color: rgba(255,255,255,0.22);
+    }
+    footer {
+      margin-top: 36px;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+    @media (max-width: 640px) {
+      main {
+        width: min(100% - 24px, 980px);
+        padding-top: 28px;
+      }
+      .hero, .panel {
+        padding: 22px;
+        border-radius: 22px;
+      }
+      .actions { flex-direction: column; }
+      .btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <nav class="topnav">
+      <a href="../">← Back to KyaniteShift</a>
+      <a href="../papers/">KS Papers</a>
+    </nav>
+
+    <section class="hero">
+      <div class="eyebrow">About the Author</div>
+      <h1>Mike Rizek</h1>
+      <p class="intro">
+        Author and framework developer — constitutional theory, geopolitical security, AI governance.
+      </p>
+    </section>
+
+    <section class="panel">
+      <p>
+        Mike Rizek is an author and framework developer working at the intersection of
+        constitutional theory, geopolitical security, and AI governance. He is the author of
+        Trust Architecture, seven constitutional conditions for AI infrastructure.
+      </p>
+
+      <p>
+        In more than twenty years in IT, much of it as an application systems engineer, he
+        instrumented live systems for security and performance for the United States government
+        and leading American corporations. That work was built on one premise he carries into
+        constitutional design: a system that cannot be observed while it runs cannot be trusted
+        afterward.
+      </p>
+
+      <p>
+        The papers published here apply that premise across three domains. Trust Architecture
+        sets out the constitutional conditions for AI infrastructure. The New Great Wall and Dome
+        applies the same method to defensive posture between sovereign powers. A further article
+        tests it against the Middle East conflict.
+      </p>
+
+      <p class="muted">
+        KyaniteShift is an independent project. The framework papers and articles published here
+        are his.
+      </p>
+
+      <div class="actions">
+        <a class="btn primary" href="../papers/">Read the papers</a>
+        <a class="btn" href="mailto:KyaniteShift@gmail.com">KyaniteShift@gmail.com</a>
+      </div>
+    </section>
+
+    <footer>
+      <p>© KyaniteShift · Clarity and alignment through structured problem framing.</p>
+    </footer>
+  </main>
+</body>
+</html>
