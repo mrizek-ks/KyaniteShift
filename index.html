@@ -2,7 +2,376 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KyaniteShift | Structure Before Solution</title>
+<meta name="description" content="Framework papers and articles by Mike Rizek on trust, governance, participation, and defensive architecture, published through KyaniteShift.">
+<style>
+:root{--bg:#071026;--bg2:#10264a;--card:rgba(255,255,255,.075);--line:rgba(255,255,255,.16);--text:#f4f7ff;--muted:#c0c9ed;--blue:#3c7dff;--cyan:#48d7e8;--violet:#8d6bff}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);background:radial-gradient(circle at 16% 8%,rgba(72,215,232,.14),transparent 30%),radial-gradient(circle at 86% 6%,rgba(141,107,255,.16),transparent 32%),linear-gradient(135deg,var(--bg),var(--bg2));min-height:100vh}
+body:before{content:"";position:fixed;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(0deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
+a{color:inherit;text-decoration:none}.wrap{width:min(1180px,calc(100% - 36px));margin:auto;position:relative}
+.top{min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start;padding:18px 0 36px}
+.left{display:flex;flex-direction:column;gap:18px}.logo-box{width:min(560px,100%);background:rgba(255,255,255,.075);border:1px solid rgba(255,255,255,.18);border-radius:22px;padding:12px;box-shadow:0 24px 70px rgba(0,0,0,.22)}
+.logo-box img{width:100%;display:block;border-radius:19px}.statement{display:flex;gap:34px;align-items:stretch;padding-left:78px}.statement h1{margin:0;font-size:clamp(2.9rem,5vw,4.6rem);line-height:.88;letter-spacing:-.08em}.statement h1 .gradient{background:linear-gradient(100deg,#fff 0%,#91cfff 46%,#9bd8ff 62%,#fff 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.right{padding-top:0}nav{display:flex;justify-content:flex-end;gap:22px;color:#d9d6ff;font-size:1rem;margin-bottom:16px;flex-wrap:wrap}nav a{color:#48d7e8;transition:color 0.2s ease}nav a:hover{color:#ffffff}
+.notice{background:rgba(255,255,255,.075);border:1px solid var(--line);border-radius:24px;padding:22px;color:var(--muted);font-size:1.03rem;margin-top:18px}.hero-footer{color:#cfd7ff;margin-top:28px;font-size:1.02rem}.rule{width:1px;background:linear-gradient(180deg,rgba(72,215,232,.9),rgba(141,107,255,.2));margin:8px 0}
+section{padding:42px 0}h2{font-size:clamp(1.7rem,3vw,2.5rem);letter-spacing:-.04em;margin:0 0 10px}.sub{color:var(--muted);margin:0 0 22px;max-width:760px}.grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px}.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.card{background:rgba(255,255,255,.065);border:1px solid var(--line);border-radius:24px;padding:28px;display:flex;flex-direction:column;transition:all 0.3s ease}
+.card:hover{background:rgba(255,255,255,.095);border-color:rgba(255,255,255,.24);transform:translateY(-2px)}
+.card h3{margin:12px 0 0;font-size:1.28rem}.card p{margin:12px 0 0;color:var(--muted);flex-grow:1}.card img{width:100%;border-radius:16px;margin-bottom:8px}.card .tag{display:inline-block;margin-bottom:10px;color:#9fdcff;font-size:.86rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700}
+.gpt-img{width:100%}.wide{width:100%}.buttons{display:flex;gap:16px;margin-top:22px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 24px;border-radius:999px;border:1px solid rgba(255,255,255,.16);color:#fff;font-weight:750;background:rgba(255,255,255,.075);transition:all 0.2s ease}
+.btn.primary{background:linear-gradient(135deg,#3c7dff,#48d7e8);border-color:rgba(255,255,255,.2);color:#fff}
+.btn:hover{background:rgba(255,255,255,.12)}.btn.primary:hover{opacity:.9}
+.prompt-list{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 18px}.prompt{border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.06);color:#dbe6ff;padding:8px 12px;border-radius:6px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.78rem}
+.example{display:grid;grid-template-columns:1fr 1fr;gap:24px}.example .card{background:rgba(255,255,255,.045)}.example pre{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:18px;overflow:auto;color:#eef4ff;line-height:1.55;font-size:.91rem;white-space:pre-wrap}
+.details{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.bottom-footer{text-align:center;margin-top:42px;padding-top:42px;border-top:1px solid rgba(255,255,255,.1);color:var(--muted);font-size:.95rem}
+@media(max-width:1050px){.top{grid-template-columns:1fr}.right nav{justify-content:flex-start}.statement{padding-left:0}.grid,.grid.three{grid-template-columns:repeat(2,1fr)}.hero-footer{margin-top:18px}}
+@media(max-width:760px){nav{display:flex;justify-content:flex-start;gap:12px;flex-wrap:wrap;font-size:0.92rem}.details,.example{grid-template-columns:1fr}.grid,.grid.three{grid-template-columns:1fr}.statement h1{font-size:3.2rem}.statement{flex-direction:column}}
+
+/* Refined continuous right-side hero panel */
+.right nav{
+  margin-bottom:16px;
+}
+.right-panel{
+  background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.035));
+  border-top:4px solid rgba(141,107,255,.22);
+  padding:18px 18px 18px;
+  max-width:720px;
+}
+.right-panel .eyebrow{
+  margin:0 0 12px;
+  background:rgba(72,215,232,.08);
+  font-family:inherit;
+}
+.right-panel .lead,
+.right-panel .not-text,
+.right-panel .credit{
+  font-family:inherit;
+  font-size:1.02rem;
+  line-height:1.55;
+  color:#d7e4ff;
+  margin:0;
+}
+.right-panel .lead{
+  font-size:1.12rem;
+  padding:0;
+  border-top:0;
+  background:none;
+  margin-bottom:14px;
+}
+.right-panel .not-text{
+  color:#c6d1ef;
+  margin-bottom:14px;
+}
+.right-panel .credit{
+  color:#cfd7ff;
+  font-size:1.02rem;
+  margin-bottom:16px;
+}
+.hero-buttons{
+  justify-content:flex-start;
+  margin-top:0;
+}
+.notice,.hero-footer{
+  display:none;
+}
+@media(max-width:1050px){
+  .hero-buttons{justify-content:flex-start;margin-top:0}
+}
+
+.statement{flex-direction:column;gap:18px;padding-left:44px}
+.statement .rule{display:none}
+.hero-advantage{max-width:650px;margin:0;font-size:clamp(.96rem,1.15vw,1.08rem);line-height:1.62;color:rgba(235,242,255,.86);text-shadow:0 1px 14px rgba(0,0,0,.28)}
+.framework-notes{display:grid;gap:10px;margin:0 0 22px}
+.framework-note{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.045);border-radius:16px;padding:10px 12px;color:#cdd9f7;font-size:1.01rem;line-height:1.45}
+.framework-note strong{color:#f3f7ff}
+@media(max-width:1050px){.statement{padding-left:0}}
+
+.hero-fit-note{display:none}
+@media(min-width:1100px){
+  .top{
+    align-items:start;
+  }
+  .logo-box img{
+    max-height:300px;
+    object-fit:cover;
+  }
+}
+
+.feedback-card {
+  margin: 34px auto 0;
+  max-width: 900px;
+  padding: 24px;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.04));
+  box-shadow: 0 24px 70px rgba(0,0,0,.18);
+}
+.feedback-card h2 {
+  margin-bottom: 8px;
+}
+.feedback-card p {
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0 0 18px;
+  max-width: 760px;
+}
+.feedback-card .btn {
+  display: inline-flex;
+}
+
+.feedback-email {
+  margin-top: 16px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.055);
+  color: #dbe6ff;
+}
+.feedback-email a {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 1.14rem;
+  color: #ffffff;
+  letter-spacing: .01em;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.papers-card {
+  margin: 0 auto;
+  max-width: 1040px;
+  padding: 28px;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 26px;
+  background: linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.04));
+  box-shadow: 0 24px 70px rgba(0,0,0,.18);
+}
+.papers-card h2 {
+  margin-bottom: 10px;
+}
+.papers-card p {
+  color: var(--muted);
+  line-height: 1.65;
+  max-width: 860px;
+}
+.paper-list {
+  display: grid;
+  gap: 16px;
+  margin-top: 20px;
+}
+.paper-item {
+  padding: 20px;
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.055);
+}
+.paper-item h3 {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+}
+.paper-meta {
+  font-size: .92rem;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.paper-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+.paper-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.16);
+  color: #fff;
+  text-decoration: none;
+  background: rgba(255,255,255,.07);
+}
+.paper-actions a:hover {
+  background: rgba(255,255,255,.12);
+}
+
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VBENV022D0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VBENV022D0');
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<main>
+<section id="top" class="top">
+<div class="left">
+<div class="logo-box"><img src="assets/ks-main-logo.png" alt="KyaniteShift Main logo"></div>
+<div class="statement"><h1><span class="gradient">Structure<br>before<br>solution.</span></h1><p class="hero-advantage">KyaniteShift helps slow down unclear situations before reacting, fixing, or repeating. The framework separates facts, assumptions, missing information, and recurrence so decisions can become clearer, steadier, and more defensible.</p></div>
+</div>
+<div class="right">
+<nav><a href="papers/">Papers</a><a href="about/">About</a><a href="#versions">Versions</a><a href="#guide">Guide</a><a href="#example">Example</a><a href="#feedback">Feedback</a></nav>
+
+<div class="right-panel">
+  <div class="eyebrow">Structured clarity before solutions</div>
+
+  <p class="lead">KyaniteShift is a structured clarity framework for slowing down unclear situations before reaction. It separates what is stated, what may be assumed, what is still unknown, and whether the issue is new or recurring.</p>
+
+  <div class="framework-notes">
+    <div class="framework-note"><strong>IQuartz</strong> helps identify whether a situation is recurring, interpretive, or structurally misaligned.</div>
+    <div class="framework-note"><strong>K-Bridge</strong> turns the clearer frame into usable continuity without forcing a premature conclusion.</div>
+  </div>
+
+  <p class="not-text"><strong>What KyaniteShift is not:</strong> KyaniteShift is not therapy, legal advice, medical advice, financial advice, or a replacement for human judgment. It is a structured reflection tool for clearer thinking.</p>
+
+  <p class="credit"><strong>KyaniteShift</strong><br>An independent project by Mike Rizek. Framework papers and articles are published here; the KyaniteShift tools open in Claude and require a free Claude account.</p>
+
+  <div class="buttons hero-buttons"><a class="btn primary" href="papers/">Read the papers</a><a class="btn secondary" href="#versions">Try a version</a></div>
+</div>
+</div>
+</section>
+
+<section id="papers" class="papers-card">
+  <h2>KS Papers</h2>
+  <p>Framework papers and articles by Mike Rizek, exploring trust, governance, participation, defensive architecture, and the conditions that make institutions worth relying on.</p>
+
+  <div class="paper-list">
+    <article class="paper-item">
+      <div class="paper-meta">Mike Rizek · Commentary · June 2026</div>
+      <h3>The Anthropic Incident Reveals What AI Governance Is Missing</h3>
+      <p>A civilian certification body for AI, independent of both government and industry, proposed after an export control directive took two frontier models offline worldwide in a single evening.</p>
+    </article>
+
+    <article class="paper-item">
+      <div class="paper-meta">Mike Rizek · Article · June 2026</div>
+      <h3>Applying a Constitutional Framework to the Middle East Conflict</h3>
+      <p>Trust Architecture tested against one of the most entrenched conflicts in modern history, applying five of the framework's seven constitutional conditions.</p>
+    </article>
+
+    <article class="paper-item">
+      <div class="paper-meta">Mike Rizek · Policy Brief · Version 1.0</div>
+      <h3>The New Great Wall and Dome: A Power to Power Defensive Architecture</h3>
+      <p>A defensive posture agreement where sovereign powers commit sovereign resources and live inside the arrangement itself.</p>
+    </article>
+
+    <article class="paper-item">
+      <div class="paper-meta">Mike Rizek · Constitutional Framework Paper · Version 3.0</div>
+      <h3>Trust Architecture: A Constitutional Framework for AI Infrastructure</h3>
+      <p>Seven constitutional conditions that support genuine trust and legitimate participation within increasingly intelligent and interconnected systems. Versions 1.0 and 2.0 are also available.</p>
+    </article>
+  </div>
+
+  <div class="buttons"><a class="btn primary" href="papers/">Open KS Papers Repository →</a><a class="btn" href="about/">About the author</a></div>
+</section>
+
+<section id="versions"><h2>Try a KyaniteShift version</h2><p class="sub">These open in Claude and require a free Claude account.</p><div class="grid">
+<a href="https://claude.ai/artifact/14XVywnhCaxufe2B67e57N" class="card"><img class="gpt-img wide" src="assets/ks-main-logo.png" alt="KyaniteShift Main logo"><span class="tag">Main</span><h3>KyaniteShift Main</h3><p>Core structured clarity for complex, recurring, or poorly framed situations.</p></a>
+<a href="https://claude.ai/artifact/NGLcKXUrb4tTCnZf8Hf99G" class="card"><img class="gpt-img" src="assets/ks-ff.png" alt="KyaniteShift FF family-friendly logo"><span class="tag">Family Friendly</span><h3>KyaniteShift FF</h3><p>Gentler, accessible clarity for everyday family, friendship, learning, and general life situations.</p></a>
+<a href="https://claude.ai/artifact/KXgcfN3NYKRP9EbbG3f3wE" class="card"><img class="gpt-img" src="assets/ks-chatside.png" alt="KyaniteShift ChatSide logo"><span class="tag">ChatSide</span><h3>KyaniteShift ChatSide</h3><p>Lighter continuation for ongoing conversations where less repeated decomposition is needed.</p></a>
+<a href="https://claude.ai/artifact/MEMkNopzJfTe4J4AdmuEqK" class="card"><img class="gpt-img" src="assets/ks-sc.png" alt="KyaniteShift Senior Clarity logo"><span class="tag">Senior Clarity</span><h3>KyaniteShift SC</h3><p>Clear, calm, practical framing for appointments, service issues, pressure-filled decisions, and family concerns.</p></a>
+<a href="https://claude.ai/artifact/DTk7GgALU6WWM2Pbasnq5d" class="card"><img class="gpt-img" src="assets/ks-cs.png" alt="KyaniteShift Continuity Studio logo"><span class="tag">Continuity Studio</span><h3>KyaniteShift Continuity Studio</h3><p>Turns clarified frames and K-Bridges into polished communication, publication drafts, and reusable continuity.</p></a>
+</div></section>
+
+<section id="guide"><h2>Which version should I use?</h2><p class="sub">Each version uses the same core idea — clarity before reaction — but is shaped for a different situation and tone.</p><div class="grid three">
+<article class="card"><h3>KyaniteShift Main</h3><p><strong>Use for:</strong> workplace issues, leadership communication, RCA framing, creative uncertainty, recurring problems, and team alignment.</p></article>
+<article class="card"><h3>KyaniteShift FF</h3><p><strong>Use for:</strong> family-friendly reflection, younger/general users, everyday confusion, friendship tension, and softer emotional clarity.</p></article>
+<article class="card"><h3>KyaniteShift ChatSide</h3><p><strong>Use for:</strong> ongoing chat-style conversations where full decomposition every turn would feel too heavy.</p></article>
+<article class="card"><h3>KyaniteShift SC</h3><p><strong>Use for:</strong> senior clarity, appointments, family concerns, pressure-filled requests, service issues, and everyday decisions.</p></article>
+
+<article class="card"><h3>KyaniteShift Continuity Studio</h3><p><strong>Use for:</strong> turning clarified frames, K-Bridges, reflections, and structured ideas into polished communication, publication-ready work, and continuity.</p></article>
+</div></section>
+
+<section id="example"><h2>Example use</h2><p class="sub">KyaniteShift is useful when a situation feels messy, repeated, sensitive, or hard to explain.</p><div class="example"><div class="card"><h3>Messy prompt</h3><p>“My team says the system is stable, but some people say it keeps failing. We cannot agree on what stable means or who owns the decision.”</p></div><div class="card"><h3>Structured frame</h3><pre>Claims: The system is stable.
+Claims: The system is not stable.
+Assumptions: "Stability" means the same thing to both sides.
+Missing Info: What metrics or standards define stability for this team?
+
+🔷 IQuartz
+Recurrence: strong
+Divergence: high
+
+✦ K Bridge
+The group may be aligned on wanting stability, but not yet aligned on how stability should be judged, measured, or owned.</pre></div></div></section>
+</main>
+
+<section id="feedback" class="feedback-card">
+  <h2>Help improve KyaniteShift</h2>
+  <p>If KyaniteShift helped clarify a situation, or if something felt unclear, incomplete, or difficult to use, feedback is welcome. Observations help improve the framework, the KyaniteShift versions, and the KyaniteShift site over time.</p>
+  <p class="feedback-email"><strong>Please send comments or feedback to:</strong><br><a href="mailto:KyaniteShift@gmail.com">KyaniteShift@gmail.com</a></p>
+</section>
+
+<div class="bottom-footer"><strong>KyaniteShift</strong><br>An independent project by Mike Rizek. KyaniteShift tools open in Claude and require a free Claude account. This static page uses no Open AI APIs or backend services.</div>
+
+<script>
+  // If an older shared link ends in #guide, open at the top hero/logo section instead.
+  // The Guide nav still works after the page has loaded.
+  if (window.location.hash === "#guide") {
+    history.replaceState(null, "", window.location.pathname + "#top");
+    window.scrollTo(0, 0);
+  }
+</script>
+
+<!-- Repackaged KS-CS/hero update verified: 2026-05-18 15:06 UTC -->
+
+<script>
+  // KyaniteShift lightweight GA4 event tracking.
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('a[href*="claude.ai/artifact/"]').forEach(function (link) {
+      link.addEventListener("click", function () {
+        if (typeof gtag === "function") {
+          gtag("event", "gpt_link_click", {
+            event_category: "KyaniteShift GPT",
+            event_label: (link.textContent || "GPT link").trim(),
+            link_url: link.href
+          });
+        }
+      });
+    });
+
+    document.querySelectorAll("video").forEach(function (video) {
+      video.addEventListener("play", function () {
+        if (typeof gtag === "function") {
+          gtag("event", "video_play", {
+            event_category: "KyaniteShift Video",
+            event_label: video.currentSrc || "KS-FF intro video"
+          });
+        }
+      }, { once: true });
+    });
+  });
+</script>
+
+<script>
+  // KyaniteShift feedback email click tracking.
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('a[href^="mailto:KyaniteShift@gmail.com"]').forEach(function (link) {
+      link.addEventListener("click", function () {
+        if (typeof gtag === "function") {
+          gtag("event", "feedback_email_click", {
+            event_category: "KyaniteShift Feedback",
+            event_label: "Feedback email"
+          });
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
 <title>KyaniteShift | Structure Before Solution</title>
 <meta name="description" content="Framework papers and articles by Mike Rizek on trust, governance, participation, and defensive architecture, published through KyaniteShift.">
 <style>
